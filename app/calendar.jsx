@@ -194,7 +194,8 @@ export default function ProductivityCalendar() {
                     </TouchableOpacity>
                 </View>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll}
+                    contentContainerStyle={styles.chipScrollContent}>
                     {categories.map((cat) => (
                         <TouchableOpacity
                             key={cat}
@@ -261,7 +262,7 @@ const styles = StyleSheet.create({
     activeTabButton: { backgroundColor: '#2979ff' },
     tabText: { color: '#717E95', fontWeight: 'bold' },
     activeTabText: { color: 'white' },
-    chipScroll: { marginVertical: 10, paddingLeft: 20 },
+    chipScroll: { marginVertical: 10, paddingLeft: 20, paddingRight: 30 },
     chip: { paddingHorizontal: 16, paddingVertical: 8, borderRadius: 20, backgroundColor: '#1C222E', marginRight: 10, borderWidth: 1, borderColor: '#333' },
     activeChip: { backgroundColor: '#2979ff', borderColor: '#2979ff' },
     chipText: { color: '#717E95', fontWeight: '600' },
@@ -276,6 +277,7 @@ const styles = StyleSheet.create({
     emptyContainer: { alignItems: 'center', marginTop: 40 },
     emptyText: { color: '#717E95', marginTop: 10 },
     listContent: { paddingBottom: 120 },
+    chipScrollContent: { paddingRight: 30 },
     bottomNav: {
         position: "absolute",
         bottom: 0,

@@ -32,7 +32,7 @@ export default function NotebooksScreen() {
     };
 
     const handleDelete = () => {
-        if (!selectedNotebook) return; // Null Guard
+        if (!selectedNotebook) return;
 
         Alert.alert(
             "Delete Notebook",
@@ -43,7 +43,7 @@ export default function NotebooksScreen() {
                     text: "Delete", style: "destructive", onPress: () => {
                         deleteNotebook(selectedNotebook.id);
                         setMenuVisible(false);
-                        setNotebooks(getNotebooks()); // Refresh UI
+                        setNotebooks(getNotebooks());
                         setSelectedNotebook(null);
                     }
                 }
@@ -52,8 +52,7 @@ export default function NotebooksScreen() {
     };
 
     const handleEdit = () => {
-        if (!selectedNotebook) return; // Null Guard
-
+        if (!selectedNotebook) return;
         setMenuVisible(false);
         router.push({
             pathname: "/newnotebook",
@@ -74,7 +73,9 @@ export default function NotebooksScreen() {
                     <Text style={styles.title}>Notebooks</Text>
                     <Text style={styles.subtitle}>Organize your study notes</Text>
                 </View>
-                <Ionicons name="search" size={22} color="#fff" />
+                <TouchableOpacity>
+                    <Ionicons name="search" size={22} color="#fff" />
+                </TouchableOpacity>
             </View>
 
             <FlatList
@@ -123,7 +124,12 @@ export default function NotebooksScreen() {
                 </Pressable>
             </Modal>
 
-            <TouchableOpacity style={styles.fab} onPress={() => router.push("/newnotebook")}>
+            {/* FIXED FAB - Now positioned absolutely above the nav bar */}
+            <TouchableOpacity
+                style={styles.fab}
+                onPress={() => router.push("/newnotebook")}
+                activeOpacity={0.8}
+            >
                 <Ionicons name="add" size={32} color="#fff" />
             </TouchableOpacity>
 
@@ -149,13 +155,33 @@ const styles = StyleSheet.create({
     cardTitle: { fontSize: 17, fontWeight: "700", color: "#fff" },
     cardSubtitle: { fontSize: 13, color: "#94A3B8", marginTop: 4 },
     threeDots: { padding: 15 },
-    fab: { position: "absolute", right: 25, bottom: 95, width: 64, height: 64, borderRadius: 32, backgroundColor: "#2563EB", alignItems: "center", justifyContent: "center", elevation: 8 },
+
+    // THE FIXED FAB STYLE
+    fab: {
+        position: "absolute",
+        right: 25,
+        bottom: 100, // Positioned higher to clear the bottomNav (which is 80 height)
+        width: 64,
+        height: 64,
+        borderRadius: 32,
+        backgroundColor: "#2563EB",
+        alignItems: "center",
+        justifyContent: "center",
+        elevation: 8,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        zIndex: 999 // Ensure it stays on top
+    },
+
     modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.7)', justifyContent: 'flex-end' },
     actionSheet: { backgroundColor: '#111827', borderTopLeftRadius: 28, borderTopRightRadius: 28, padding: 25, paddingBottom: 45 },
     sheetHandle: { width: 40, height: 5, backgroundColor: '#374151', borderRadius: 10, alignSelf: 'center', marginBottom: 20 },
     sheetTitle: { color: '#fff', fontSize: 18, fontWeight: '800', marginBottom: 25, textAlign: 'center' },
     sheetOption: { flexDirection: 'row', alignItems: 'center', paddingVertical: 18, gap: 15, borderBottomWidth: 1, borderBottomColor: '#1F2937' },
     sheetOptionText: { color: '#fff', fontSize: 16, fontWeight: '600' },
+
     bottomNav: {
         position: "absolute",
         bottom: 0,
@@ -169,15 +195,5 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: "#1F2937",
         paddingBottom: 20
-    },
-    fab: {
-        backgroundColor: '#2563EB',
-        width: 60,
-        height: 60,
-        borderRadius: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: -50,
-        elevation: 10
     },
 });

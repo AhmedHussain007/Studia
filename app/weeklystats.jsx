@@ -185,7 +185,8 @@ export default function WeeklyProgress() {
                         </TouchableOpacity>
                     </View>
 
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterScroll}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.filterScroll}
+                        contentContainerStyle={styles.filterScrollContent}>
                         <TouchableOpacity
                             onPress={() => setSelectedCategory('All')}
                             style={[styles.chip, selectedCategory === 'All' && styles.activeChip]}
@@ -223,24 +224,24 @@ export default function WeeklyProgress() {
                     </View>
                 </View>
 
-            </ScrollView>
+            </ScrollView >
 
             {/* Bottom Nav */}
-            <View style={styles.bottomNav}>
+            < View style={styles.bottomNav} >
                 <TouchableOpacity onPress={() => router.push('/dashboard')}>
                     <Ionicons name="home" size={24} color="#64748B" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => router.push('/calendar')}>
                     <Ionicons name="calendar" size={24} color="#64748B" />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => router.push('/weeklystats')}>
+                <TouchableOpacity >
                     <Ionicons name="bar-chart" size={24} color="#3B82F6" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => router.push('/notebooks')}>
                     <Ionicons name="flag" size={24} color="#64748B" />
                 </TouchableOpacity>
-            </View>
-        </SafeAreaView>
+            </View >
+        </SafeAreaView >
     );
 }
 
@@ -267,7 +268,11 @@ const styles = StyleSheet.create({
     filterHeader: { flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginBottom: 10 },
     filterTitle: { color: '#FFF', fontSize: 16, fontWeight: '700' },
     resetText: { color: '#3B82F6', fontWeight: '600' },
-    filterScroll: { paddingLeft: 20 },
+    filterScroll: { marginTop: 10 },
+    filterScrollContent: {
+        paddingLeft: 20,  // Re-add the left space here
+        paddingRight: 10, // THIS FIXES THE RIGHT-SIDE CUTOFF
+    },
     chip: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#111827', paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12, marginRight: 10, borderWidth: 1, borderColor: '#1F2937' },
     activeChip: { borderColor: '#3B82F6', backgroundColor: '#1E293B' },
     chipText: { color: '#FFF', fontWeight: '600', fontSize: 13 },

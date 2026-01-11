@@ -55,3 +55,14 @@ export const checkPassword = (inputPassword) => {
         return false;
     }
 };
+
+export const adjustSecondsInDB = (deltaSeconds) => {
+    try {
+        db.runSync(
+            `UPDATE users SET total_seconds = total_seconds + ? WHERE id = 1;`,
+            [deltaSeconds]
+        );
+    } catch (error) {
+        console.error("Error adjusting seconds in DB:", error);
+    }
+};

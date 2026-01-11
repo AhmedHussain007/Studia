@@ -118,3 +118,15 @@ export const getStatsForRange = (startDate, endDate) => {
         return [];
     }
 };
+
+
+export const adjustDailySeconds = (date, deltaSeconds) => {
+    try {
+        db.runSync(
+            `UPDATE study_hours SET total_daily_seconds = total_daily_seconds + ? WHERE date = ?`,
+            [deltaSeconds, date]
+        );
+    } catch (error) {
+        console.error("Update Daily Stats Error:", error);
+    }
+};

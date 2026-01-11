@@ -180,10 +180,11 @@ export default function Profile() {
                                     </TouchableOpacity>
                                     {currentSlots.map(slot => (
                                         <View key={slot.id} style={styles.slotCard}>
-                                            <View style={styles.slotTime}>
-                                                <Text style={styles.timeText}>{slot.start_time.slice(0, 5)}</Text>
-                                                <View style={styles.timeLine} />
-                                                <Text style={styles.timeText}>{slot.end_time.slice(0, 5)}</Text>
+                                            {/* Change this section inside currentSlots.map */}
+                                            <View style={styles.slotTimeHorizontal}>
+                                                <Text style={styles.timeText}>
+                                                    {slot.start_time.slice(0, 5)} - {slot.end_time.slice(0, 5)}
+                                                </Text>
                                             </View>
                                             <View style={styles.slotActivity}>
                                                 <Text style={styles.activityText}>{slot.activity}</Text>
@@ -262,11 +263,33 @@ const styles = StyleSheet.create({
     timelineContainer: { borderLeftWidth: 2, borderLeftColor: '#1F2937', marginLeft: 10, paddingLeft: 15 },
     addSlotBtn: { backgroundColor: 'rgba(59, 130, 246, 0.1)', padding: 10, borderRadius: 10, marginBottom: 20, alignItems: 'center', borderStyle: 'dashed', borderWidth: 1, borderColor: '#3B82F6' },
     addSlotBtnText: { color: '#3B82F6', fontWeight: 'bold' },
-    slotCard: { backgroundColor: '#111827', borderRadius: 15, padding: 15, marginBottom: 15, flexDirection: 'row', alignItems: 'center' },
+    slotCard: {
+        backgroundColor: '#111827',
+        borderRadius: 15,
+        padding: 15,
+        marginBottom: 15,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    slotTimeHorizontal: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#1E293B', // Optional: subtle background to make time stand out
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 8,
+    },
     slotTime: { width: 60, alignItems: 'center' },
-    timeText: { color: '#3B82F6', fontSize: 11, fontWeight: 'bold' },
+    timeText: {
+        color: '#3B82F6',
+        fontSize: 13, // Slightly larger for readability
+        fontWeight: 'bold'
+    },
     timeLine: { width: 2, height: 15, backgroundColor: '#1F2937', marginVertical: 4 },
-    slotActivity: { flex: 1, marginLeft: 15 },
+    slotActivity: {
+        flex: 1,
+        marginLeft: 15
+    },
     activityText: { color: '#fff', fontSize: 15, fontWeight: '600' },
     // Modals
     modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.85)', justifyContent: 'center', alignItems: 'center' },
