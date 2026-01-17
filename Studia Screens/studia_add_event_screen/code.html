@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia Add Event Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0B0D14", // Deep black/navy as requested
+                        "surface-dark": "#151921",
+                        "input-dark": "#1F242F",
+                        "text-secondary": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.4)',
+                        'glow': '0 0 15px -3px rgba(19, 91, 236, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen overflow-x-hidden selection:bg-primary/30">
+<!-- Mobile Container -->
+<div class="relative flex flex-col h-screen max-w-md mx-auto shadow-2xl overflow-hidden bg-background-dark">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 pt-12 pb-4 bg-background-dark shrink-0 z-20">
+<button class="flex items-center justify-center w-10 h-10 rounded-full text-white active:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[28px]">arrow_back</span>
+</button>
+<h1 class="text-white text-lg font-bold tracking-tight">Add Event</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto overflow-x-hidden relative w-full no-scrollbar pb-24">
+<!-- Form Card -->
+<div class="px-4 py-2">
+<div class="bg-surface-dark rounded-2xl p-5 shadow-soft border border-white/5 space-y-6">
+<!-- Title Input -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-secondary ml-1" for="event-title">Event Title</label>
+<input class="w-full bg-input-dark border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3.5 text-white placeholder-text-secondary/50 transition-all duration-200" id="event-title" placeholder="e.g., Advanced Calculus Study" type="text"/>
+</div>
+<!-- Category Selector -->
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary ml-1">Category</label>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
+<!-- Selected Item -->
+<button class="flex shrink-0 items-center gap-2 px-4 py-2.5 rounded-full bg-primary/10 border border-primary/50 text-primary transition-all">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_currentColor]"></span>
+<span class="text-sm font-medium">Uni</span>
+</button>
+<!-- Unselected Items -->
+<button class="flex shrink-0 items-center gap-2 px-4 py-2.5 rounded-full bg-input-dark border border-transparent text-text-secondary hover:bg-white/5 transition-all">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-sm font-medium">Career</span>
+</button>
+<button class="flex shrink-0 items-center gap-2 px-4 py-2.5 rounded-full bg-input-dark border border-transparent text-text-secondary hover:bg-white/5 transition-all">
+<span class="w-2 h-2 rounded-full bg-purple-400"></span>
+<span class="text-sm font-medium">FYP</span>
+</button>
+<button class="flex shrink-0 items-center gap-2 px-4 py-2.5 rounded-full bg-input-dark border border-transparent text-text-secondary hover:bg-white/5 transition-all">
+<span class="w-2 h-2 rounded-full bg-orange-400"></span>
+<span class="text-sm font-medium">Freelancing</span>
+</button>
+</div>
+</div>
+<!-- Event Type Toggle -->
+<div class="space-y-3">
+<label class="text-sm font-medium text-text-secondary ml-1">Event Type</label>
+<div class="bg-input-dark p-1 rounded-xl flex relative">
+<!-- Toggle Background Slider Simulation (Visual only in this HTML) -->
+<div class="w-1/2 h-full absolute left-0 top-0 p-1">
+<div class="w-full h-full bg-primary/20 rounded-lg border border-primary/20 shadow-sm"></div>
+</div>
+<button class="flex-1 py-2.5 relative z-10 text-center text-sm font-medium text-primary">
+                                Specific Date
+                            </button>
+<button class="flex-1 py-2.5 relative z-10 text-center text-sm font-medium text-text-secondary">
+                                Whole Month
+                            </button>
+</div>
+</div>
+<!-- Date & Time Row -->
+<div class="flex gap-4">
+<div class="flex-1 space-y-2">
+<label class="text-sm font-medium text-text-secondary ml-1">Date</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px]">calendar_today</span>
+<input class="w-full bg-input-dark border-transparent focus:border-primary focus:ring-0 rounded-xl pl-10 pr-4 py-3.5 text-white cursor-pointer hover:bg-white/5 transition-colors" readonly="" type="text" value="Oct 24, 2023"/>
+</div>
+</div>
+<div class="w-1/3 space-y-2">
+<label class="text-sm font-medium text-text-secondary ml-1">Time</label>
+<div class="relative">
+<input class="w-full bg-input-dark border-transparent focus:border-primary focus:ring-0 rounded-xl px-3 py-3.5 text-center text-white cursor-pointer hover:bg-white/5 transition-colors" readonly="" type="text" value="10:00 AM"/>
+</div>
+</div>
+</div>
+<!-- Location Input -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-secondary ml-1" for="location">Location <span class="text-xs opacity-50">(Optional)</span></label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-secondary material-symbols-outlined text-[20px] filled">location_on</span>
+<input class="w-full bg-input-dark border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-xl pl-10 pr-4 py-3.5 text-white placeholder-text-secondary/50 transition-all duration-200" id="location" placeholder="Add location" type="text"/>
+</div>
+</div>
+<!-- Description Area -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-secondary ml-1" for="description">Description</label>
+<textarea class="w-full bg-input-dark border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3 text-white placeholder-text-secondary/50 resize-none transition-all duration-200" id="description" placeholder="Add details about your study session..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Bottom Spacer so content isn't hidden by fixed footer -->
+<div class="h-24"></div>
+</main>
+<!-- Sticky Footer Action Bar -->
+<div class="absolute bottom-0 left-0 w-full p-4 bg-background-dark/95 backdrop-blur-md border-t border-white/5 z-30">
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-blue-600 active:scale-[0.98] transition-all text-white font-semibold py-4 rounded-xl shadow-glow text-base">
+                    Save Event
+                </button>
+<button class="w-full bg-transparent text-text-secondary hover:text-white py-2 text-sm font-medium transition-colors">
+                    Cancel
+                </button>
+</div>
+</div>
+</div>
+</body></html>

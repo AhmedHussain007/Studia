@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia Weekly Progress</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec", // Blue accent
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622", // Deep Navy/Black
+                        "surface-dark": "#1C232F", // Slightly lighter for cards
+                        "fyp": "#ef4444", // Red
+                        "uni": "#135bec", // Blue (Primary)
+                        "freelance": "#f97316", // Orange
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px -5px rgba(19, 91, 236, 0.5)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col overflow-hidden relative">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-transparent dark:border-white/5">
+<div class="flex items-center justify-between">
+<button class="flex items-center justify-center w-10 h-10 rounded-full active:bg-black/5 dark:active:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Weekly Progress</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-dark border border-white/5 active:bg-white/10 transition-colors relative group">
+<span class="material-symbols-outlined text-primary text-[20px]">filter_list</span>
+<div class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-surface-dark"></div>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-6 pb-24 no-scrollbar">
+<!-- Stats Overview -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Total Hours Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-5 shadow-card border border-slate-100 dark:border-white/5 flex flex-col gap-1 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-4xl">schedule</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Total Hours</p>
+<div class="flex items-baseline gap-2 mt-1">
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">32.5</p>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">hrs</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-emerald-500 bg-emerald-500/10 w-fit px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="text-xs font-bold">+12%</span>
+</div>
+</div>
+<!-- Weekly Goal Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-5 shadow-card border border-slate-100 dark:border-white/5 flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Weekly Goal</p>
+<div class="h-5 w-5 rounded-full border-2 border-slate-200 dark:border-slate-600 flex items-center justify-center">
+<div class="h-2.5 w-2.5 bg-slate-200 dark:bg-slate-600 rounded-full"></div>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">40</p>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">hrs</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700/50 rounded-full h-1.5 mt-auto">
+<div class="bg-primary h-1.5 rounded-full w-[81%] shadow-[0_0_10px_rgba(19,91,236,0.5)]"></div>
+</div>
+</div>
+</section>
+<!-- Chart Section -->
+<section class="bg-white dark:bg-surface-dark rounded-3xl p-6 shadow-card border border-slate-100 dark:border-white/5">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-base font-bold text-slate-900 dark:text-white">Daily Activity</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Oct 12 - Oct 18</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-medium text-primary">Live</span>
+</div>
+</div>
+<!-- Bar Chart Container -->
+<div class="relative h-64 w-full mt-2">
+<!-- Goal Line -->
+<div class="absolute top-[25%] left-0 w-full flex items-center group/goal z-0">
+<div class="w-full border-t border-dashed border-slate-300 dark:border-white/20"></div>
+<span class="absolute right-0 -top-6 bg-surface-dark border border-white/10 text-[10px] text-slate-400 px-2 py-0.5 rounded-full opacity-0 group-hover/goal:opacity-100 transition-opacity">Goal: 6h</span>
+</div>
+<!-- Bars Wrapper -->
+<div class="h-full w-full flex items-end justify-between gap-2 sm:gap-4 z-10 relative px-1">
+<!-- Day 1: Mon -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<!-- Bar Fill -->
+<div class="w-full bg-slate-400 dark:bg-slate-600 rounded-t-lg transition-all duration-500 group-hover:bg-slate-500" style="height: 45%;"></div>
+<!-- Tooltip -->
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">3.2 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">M</span>
+</div>
+<!-- Day 2: Tue -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<div class="w-full bg-slate-400 dark:bg-slate-600 rounded-t-lg transition-all duration-500 group-hover:bg-slate-500" style="height: 60%;"></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">4.5 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">T</span>
+</div>
+<!-- Day 3: Wed -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<!-- Stacked Bar Example -->
+<div class="w-full flex flex-col justify-end h-full">
+<div class="w-full bg-freelance h-[15%]"></div>
+<div class="w-full bg-primary h-[25%] rounded-t-lg relative"></div>
+</div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">2.8 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">W</span>
+</div>
+<!-- Day 4: Thu -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<div class="w-full bg-slate-400 dark:bg-slate-600 rounded-t-lg transition-all duration-500 group-hover:bg-slate-500" style="height: 75%;"></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">5.6 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">T</span>
+</div>
+<!-- Day 5: Fri (Today - Active) -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-primary/10 h-full flex items-end overflow-hidden ring-1 ring-primary/30 shadow-[0_0_15px_rgba(19,91,236,0.2)]">
+<!-- Gradient/Primary Bar -->
+<div class="w-full bg-gradient-to-t from-primary to-[#3b82f6] rounded-t-lg shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500 relative" style="height: 85%;">
+<!-- Inner glow/highlight -->
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-white/40"></div>
+</div>
+<!-- Persistent Label for Today -->
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg z-20 pointer-events-none">6.2h</div>
+</div>
+<span class="text-[11px] font-bold text-white bg-primary/20 px-1.5 py-0.5 rounded">F</span>
+</div>
+<!-- Day 6: Sat -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<!-- Stacked Example -->
+<div class="w-full flex flex-col justify-end h-full">
+<div class="w-full bg-fyp h-[10%]"></div>
+<div class="w-full bg-primary h-[30%] rounded-t-lg"></div>
+</div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">2.5 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">S</span>
+</div>
+<!-- Day 7: Sun -->
+<div class="flex flex-col items-center gap-2 flex-1 group cursor-pointer">
+<div class="relative w-full rounded-t-lg bg-slate-200 dark:bg-slate-700/30 h-full flex items-end overflow-hidden transition-all hover:bg-slate-200 dark:hover:bg-slate-700/50">
+<div class="w-full bg-slate-400 dark:bg-slate-600 rounded-t-lg transition-all duration-500 group-hover:bg-slate-500" style="height: 20%;"></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 pointer-events-none">1.0 hrs</div>
+</div>
+<span class="text-[11px] font-medium text-slate-400">S</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="flex flex-col gap-3">
+<h3 class="text-sm font-semibold text-slate-900 dark:text-white px-1">Categories</h3>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<!-- All Chip (Active) -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-black px-5 py-2.5 transition-transform active:scale-95 shadow-lg shadow-black/20 dark:shadow-white/5">
+<span class="text-sm font-bold">All</span>
+</button>
+<!-- FYP Chip -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/10 px-5 py-2.5 transition-all active:scale-95 hover:bg-slate-50 dark:hover:bg-white/5">
+<div class="w-2 h-2 rounded-full bg-fyp shadow-[0_0_8px_rgba(239,68,68,0.6)]"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">FYP</span>
+</button>
+<!-- Uni Chip -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/10 px-5 py-2.5 transition-all active:scale-95 hover:bg-slate-50 dark:hover:bg-white/5">
+<div class="w-2 h-2 rounded-full bg-uni shadow-[0_0_8px_rgba(19,91,236,0.6)]"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Uni</span>
+</button>
+<!-- Freelancing Chip -->
+<button class="flex shrink-0 items-center justify-center gap-2 rounded-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/10 px-5 py-2.5 transition-all active:scale-95 hover:bg-slate-50 dark:hover:bg-white/5">
+<div class="w-2 h-2 rounded-full bg-freelance shadow-[0_0_8px_rgba(249,115,22,0.6)]"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300">Freelancing</span>
+</button>
+</div>
+</section>
+<!-- Insight Card -->
+<section class="bg-gradient-to-r from-primary/20 to-primary/5 rounded-2xl p-0.5 shadow-card">
+<div class="bg-surface-dark rounded-[14px] p-4 flex items-start gap-4 h-full relative overflow-hidden">
+<!-- Decorative background blob -->
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex flex-col gap-1.5 flex-1 relative z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+<h3 class="text-white text-base font-bold">Insight</h3>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        Great job! You met your daily goal <span class="text-white font-medium">5 times</span> this week. That's 20% more than last week.
+                    </p>
+</div>
+<div class="w-20 h-20 shrink-0 rounded-lg bg-cover bg-center shadow-inner ring-1 ring-white/10" data-alt="Abstract minimal study desk with notebook and coffee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeKSE7s4xWJ5zrk8W0XpuBrbsMy2yrnpLpaCfxkbTrAnkQZ-xKIHhtTbETOsIMLxhRUQdfFPSPUyySGpLzRX-pizDIRM1bpz0y_hxXvsZRHBeqOLZSwzEo2V2FX2WCV_Vqzvo7X6jG2G_ti-eV-Lf8zyuKFRx7ca-IxCAMtvkGwYVlnNoesdXU1xQ-nJCu1h0cfKHMy607oeWW6S16XE9C1kZI2jf9Y07s4yGPjI7K82ENEmyGReu8crq5EGUJ0nmQ6KOZ65GZpadm');">
+</div>
+</div>
+</section>
+</main>
+</body></html>

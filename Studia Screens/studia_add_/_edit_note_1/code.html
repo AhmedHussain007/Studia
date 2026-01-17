@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia - Weekly Progress</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-light": "#3b82f6",
+                        "background-dark": "#0B0E14","card-dark": "#151A23",
+                        "card-lighter": "#1e2430",
+                        "accent-blue": "#135bec",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "xl": "1rem",
+                        "2xl": "1.25rem",
+                        "3xl": "1.5rem",
+                    },
+                    animation: {
+                        'grow': 'grow 1s ease-out forwards',
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        grow: {
+                            '0%': { height: '0', opacity: '0.5' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>.dark ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0B0E14;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #1e2430;
+            border-radius: 2px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }.delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+        .delay-700 { animation-delay: 700ms; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark text-white antialiased overflow-hidden selection:bg-primary/30 selection:text-white">
+<div class="relative flex h-screen w-full flex-col max-w-md mx-auto bg-background-dark overflow-hidden shadow-2xl border-x border-white/5">
+<header class="flex items-center justify-between px-6 py-5 bg-background-dark/95 backdrop-blur-sm z-20 sticky top-0">
+<button class="flex items-center justify-center rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-colors h-10 w-10 -ml-2">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-white flex-1 text-center">Weekly Progress</h1>
+<button class="flex items-center justify-center rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-colors h-10 w-10 -mr-2">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-20 pt-2 space-y-6">
+<div class="animate-fade-in">
+<div class="flex items-end gap-1 mb-2">
+<span class="text-sm font-medium text-slate-400">Total this week</span>
+</div>
+<div class="flex items-baseline gap-3">
+<h2 class="text-5xl font-bold text-white tracking-tight">32<span class="text-2xl text-slate-500 font-semibold ml-1">hrs</span></h2>
+<span class="px-2 py-1 rounded bg-green-500/10 text-green-400 text-xs font-bold border border-green-500/20 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                    +12%
+                </span>
+</div>
+<p class="text-sm text-slate-500 mt-1">4.5 hrs daily average</p>
+</div>
+<div class="bg-card-dark rounded-3xl p-6 shadow-lg shadow-black/20 border border-white/5 animate-fade-in delay-100 relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-semibold text-white">Activity</h3>
+<p class="text-xs text-slate-400">Oct 23 - Oct 29</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-[10px] text-slate-400 uppercase tracking-wider font-medium">Study</span>
+</div>
+</div>
+</div>
+<div class="relative h-64 w-full">
+<div class="absolute inset-0 flex flex-col justify-between text-xs text-slate-600 font-medium pointer-events-none z-0">
+<div class="border-b border-dashed border-white/5 w-full h-0 flex items-center"><span class="-mt-5">8h</span></div>
+<div class="border-b border-dashed border-white/5 w-full h-0 flex items-center"><span class="-mt-5">6h</span></div>
+<div class="border-b border-dashed border-white/5 w-full h-0 flex items-center"><span class="-mt-5">4h</span></div>
+<div class="border-b border-dashed border-white/5 w-full h-0 flex items-center"><span class="-mt-5">2h</span></div>
+<div class="border-b border-dashed border-white/5 w-full h-0 flex items-center"><span class="-mt-5">0h</span></div>
+</div>
+<div class="absolute bottom-[62.5%] w-full border-t border-primary/30 z-0 flex items-center justify-end">
+<span class="bg-card-dark text-[10px] text-primary px-1 -mt-5 font-bold">Goal 5h</span>
+</div>
+<div class="absolute inset-0 flex items-end justify-between pl-6 z-10 pt-4">
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">3h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-100" style="height: 37.5%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Mon</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">5.5h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-200" style="height: 68.75%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Tue</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">4h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-300" style="height: 50%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Wed</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">6.2h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-400" style="height: 77.5%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Thu</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">2h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-500" style="height: 25%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Fri</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7">
+<span class="text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity absolute -mt-6">7h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden">
+<div class="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-light rounded-full animate-grow delay-600" style="height: 87.5%"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">Sat</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/7 relative">
+<div class="absolute -bottom-2 w-8 h-8 bg-primary/20 rounded-full blur-xl"></div>
+<span class="text-[10px] font-bold text-white absolute -mt-6">4.5h</span>
+<div class="w-3 sm:w-4 bg-slate-700/50 rounded-full h-full relative overflow-hidden ring-1 ring-white/20">
+<div class="absolute bottom-0 w-full bg-white rounded-full animate-grow delay-700 shadow-[0_0_10px_rgba(255,255,255,0.5)]" style="height: 56.25%"></div>
+</div>
+<span class="text-xs text-white font-bold">Sun</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 animate-fade-in delay-200">
+<div class="bg-card-dark rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="p-2 bg-orange-500/10 rounded-lg text-orange-400">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<span class="text-xs text-slate-500 font-medium">Streak</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-white">12 <span class="text-sm font-medium text-slate-500">days</span></h4>
+<p class="text-xs text-slate-400 mt-1">Personal best: 15 days</p>
+</div>
+</div>
+<div class="bg-card-dark rounded-2xl p-4 border border-white/5 flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="p-2 bg-blue-500/10 rounded-lg text-blue-400">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</div>
+<span class="text-xs text-slate-500 font-medium">Daily Goal</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-white">4/5 <span class="text-sm font-medium text-slate-500">hit</span></h4>
+<p class="text-xs text-slate-400 mt-1">Keep it up!</p>
+</div>
+</div>
+</div>
+<div class="pt-2 animate-fade-in delay-300">
+<h3 class="text-sm font-semibold text-slate-300 mb-3 px-1">Focus Distribution</h3>
+<div class="bg-card-dark rounded-2xl border border-white/5 divide-y divide-white/5">
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400">
+<span class="material-symbols-outlined text-[20px]">functions</span>
+</div>
+<div>
+<p class="text-sm font-medium text-white">Mathematics</p>
+<div class="w-24 h-1.5 bg-slate-700 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-purple-500 h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-sm font-bold text-white">12.5h</span>
+<span class="text-xs text-slate-500">38%</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div>
+<p class="text-sm font-medium text-white">Physics</p>
+<div class="w-24 h-1.5 bg-slate-700 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-pink-500 h-full w-[45%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-sm font-bold text-white">8.2h</span>
+<span class="text-xs text-slate-500">25%</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between group cursor-pointer hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<div>
+<p class="text-sm font-medium text-white">History</p>
+<div class="w-24 h-1.5 bg-slate-700 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-sky-500 h-full w-[30%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-sm font-bold text-white">6.4h</span>
+<span class="text-xs text-slate-500">18%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+</main>
+<div class="absolute bottom-6 right-6">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/40 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</div>
+</div>
+
+</body></html>

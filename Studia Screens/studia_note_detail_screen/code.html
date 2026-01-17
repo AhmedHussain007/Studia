@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia Note Detail</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1e222b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics in dark mode */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3748; 
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5568; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col items-center justify-start overflow-x-hidden selection:bg-primary/30">
+<!-- Mobile Container Wrapper -->
+<div class="w-full max-w-md h-screen flex flex-col bg-background-light dark:bg-background-dark relative shadow-2xl mx-auto overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between p-4 pt-12 pb-2 bg-background-light dark:bg-background-dark z-10 shrink-0">
+<!-- Back Button -->
+<button class="text-slate-800 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<!-- Breadcrumb / Notebook Name -->
+<div class="flex flex-col items-center justify-center flex-1 mx-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Notebook</span>
+<h2 class="text-slate-900 dark:text-white text-sm font-semibold leading-tight tracking-wide truncate max-w-[150px]">Biology 101</h2>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-1">
+<button class="text-slate-800 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors group">
+<span class="material-symbols-outlined text-[24px] group-hover:text-red-500 transition-colors">delete</span>
+</button>
+<button class="text-slate-800 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Content (Scrollable) -->
+<main class="flex-1 overflow-y-auto px-4 pb-24 scroll-smooth">
+<!-- Content Card Surface -->
+<div class="w-full bg-white dark:bg-surface-dark rounded-2xl p-5 shadow-sm dark:shadow-none mt-2 min-h-[85vh]">
+<!-- Headline -->
+<div class="mb-4">
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tight mb-2">Cellular Respiration Process</h1>
+<!-- Meta Data -->
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-xs font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p>Edited today at 10:42 AM</p>
+</div>
+</div>
+<!-- Chips / Tags -->
+<div class="flex gap-2 flex-wrap mb-6">
+<div class="flex h-7 items-center justify-center px-3 rounded-full bg-blue-100 dark:bg-blue-500/20 border border-blue-200 dark:border-blue-500/30">
+<span class="text-blue-700 dark:text-blue-300 text-xs font-medium">Biology</span>
+</div>
+<div class="flex h-7 items-center justify-center px-3 rounded-full bg-slate-100 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-medium">Chapter 4</span>
+</div>
+<div class="flex h-7 items-center justify-center px-3 rounded-full bg-red-100 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20">
+<span class="text-red-600 dark:text-red-300 text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] fill-1">flag</span> Important
+                        </span>
+</div>
+</div>
+<!-- Divider -->
+<hr class="border-slate-100 dark:border-slate-700/50 mb-6"/>
+<!-- Body Text -->
+<article class="prose prose-slate dark:prose-invert max-w-none">
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-7 mb-4">
+                        Cellular respiration is a set of metabolic reactions and processes that take place in the cells of organisms to convert biochemical energy from nutrients into adenosine triphosphate (ATP), and then release waste products.
+                    </p>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-7 mb-4">
+                        The reactions involved in respiration are catabolic reactions, which break large molecules into smaller ones, releasing energy because weak high-energy bonds, in particular in molecular oxygen, are replaced by stronger bonds in the products.
+                    </p>
+<h3 class="text-slate-900 dark:text-white text-lg font-semibold mt-6 mb-2">Key Stages</h3>
+<ul class="list-disc pl-5 space-y-2 mb-4 text-slate-700 dark:text-slate-300 leading-7">
+<li><strong class="text-slate-900 dark:text-white">Glycolysis:</strong> Occurs in the cytoplasm, breaking down glucose into pyruvate.</li>
+<li><strong class="text-slate-900 dark:text-white">Citric Acid Cycle (Krebs Cycle):</strong> Takes place in the mitochondrial matrix.</li>
+<li><strong class="text-slate-900 dark:text-white">Oxidative Phosphorylation:</strong> Occurs in the inner mitochondrial membrane, generating the majority of ATP.</li>
+</ul>
+<div class="my-6 rounded-xl overflow-hidden relative h-48 w-full group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 flex items-end p-4">
+<p class="text-white text-xs font-medium opacity-80">Figure 1.1: Mitochondrial Structure</p>
+</div>
+<img alt="Abstract scientific visualization of cells and molecular structures" class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105" data-alt="Abstract scientific visualization representing cellular structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfKKKWGhUAvN6os1P_wp5YFrjaboQoiilzQIJBrABEnr4Z6prTm4GQnfq_T-tRIFWjOAHazsBVawzGgXt255RDv7EfKlfKAw4zmoY6-IH_i_RDGx1l38y2UgqTI6dFq-Fj7_x6_sg6rVhrw6vSEzbsWT2KwVpej7ZfrTkGJYmeAvSJ7RVuxrR8M4cqbt4FNmR_-g6_JowY36BbEzgZ9okFiAu3-EQ5YE-ZxyQsnZ0rQUHxxufy3IokcDmaBzmU4fWFlirMSphkLERP"/>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-7 mb-4">
+                        Ideally, 38 ATP molecules can be made per glucose molecule during cellular respiration. However, this is a theoretical maximum, and in reality, the yield is often lower due to losses across membranes.
+                    </p>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-7 mb-20">
+                         Notes regarding the electron transport chain: Remember that NADH and FADH₂ are electron carriers that donate electrons to the transport chain. This process drives the pumping of protons across the membrane, creating a gradient used by ATP synthase.
+                    </p>
+</article>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<div class="absolute bottom-6 right-6 z-20">
+<button class="flex items-center justify-center size-14 rounded-2xl bg-primary text-white shadow-lg hover:shadow-primary/40 hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined text-[28px]">edit</span>
+</button>
+</div>
+<!-- Bottom Fade Overlay for content hint -->
+<div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent pointer-events-none z-10"></div>
+</div>
+</body></html>

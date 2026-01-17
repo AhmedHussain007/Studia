@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia Event Detail</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622", // Deep navy/black
+                        "surface-dark": "#1c2433", // Slightly lighter for cards
+                        "secondary-text": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetics in web view */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3748; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5568; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<!-- Fixed header with backdrop blur for modern iOS feel -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-4 py-3 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-all text-gray-900 dark:text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h2 class="text-base font-semibold tracking-wide text-center flex-1 text-gray-900 dark:text-white">Event Details</h2>
+<button aria-label="Edit options" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-all text-primary">
+<span class="material-symbols-outlined text-[22px]">more_horiz</span>
+</button>
+</header>
+<!-- Main Content Scrollable Area -->
+<main class="flex-1 overflow-y-auto p-5 pb-32 space-y-6">
+<!-- Hero Card: Title & Badge -->
+<section class="flex flex-col gap-4">
+<div class="bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 relative overflow-hidden group">
+<!-- Decorative subtle gradient blob -->
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-700"></div>
+<div class="relative z-10">
+<div class="flex items-start justify-between mb-3">
+<!-- Category Chip -->
+<div class="inline-flex h-7 items-center justify-center px-3 rounded-full bg-primary/15 border border-primary/20">
+<span class="text-primary text-xs font-semibold tracking-wide uppercase">University</span>
+</div>
+<!-- Priority Indicator (Optional) -->
+<span class="material-symbols-outlined text-red-400 text-xl" title="High Priority">priority_high</span>
+</div>
+<h1 class="text-2xl md:text-3xl font-bold leading-tight text-gray-900 dark:text-white mb-1">
+                            Advanced Calculus Review
+                        </h1>
+<p class="text-sm text-secondary-text">Prepare for upcoming mid-terms</p>
+</div>
+</div>
+</section>
+<!-- Date, Time & Location Card -->
+<section class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 overflow-hidden">
+<!-- Date Row -->
+<div class="flex items-center gap-4 p-4 border-b border-gray-100 dark:border-white/5 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50 dark:bg-primary/20 text-primary shrink-0">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-xs font-medium text-secondary-text uppercase tracking-wider">Date</p>
+<p class="text-base font-medium text-gray-900 dark:text-white">Oct 24, 2023</p>
+</div>
+</div>
+<!-- Time Row -->
+<div class="flex items-center gap-4 p-4 border-b border-gray-100 dark:border-white/5 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 shrink-0">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-xs font-medium text-secondary-text uppercase tracking-wider">Time</p>
+<p class="text-base font-medium text-gray-900 dark:text-white">14:00 - 16:00 <span class="text-xs font-normal text-secondary-text ml-1">(2 hrs)</span></p>
+</div>
+</div>
+<!-- Location Row -->
+<div class="flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 shrink-0">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-xs font-medium text-secondary-text uppercase tracking-wider">Location</p>
+<div class="flex items-center justify-between">
+<p class="text-base font-medium text-gray-900 dark:text-white">Central Library, Room 3B</p>
+<span class="material-symbols-outlined text-gray-400 text-lg opacity-0 group-hover:opacity-100 transition-opacity -rotate-45">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Preview (Optional/Conditional) -->
+<section class="rounded-2xl overflow-hidden h-32 relative border border-gray-100 dark:border-white/5">
+<img alt="Map showing location of Central Library" class="w-full h-full object-cover opacity-60 dark:opacity-40 hover:opacity-100 transition-opacity duration-300" data-location="University Campus Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd5ZR8JOEZpoHv-PyF4-cubvD1ILLoQFMX6Lqk-jVn2A8tLhcWjh8B5WhOYT_R3zwyhFGtqbwc4cMQj2oPlj_A6vwFUdygQJ56M1ILILKU8Aig_pgQbPfumrphsYN4savMMi0w2rUYuBRyAB0qVGAlnSd7pwMmDmCRbzyKV1ijk8pxQ0CLx4EDugDYTz_zKibU7--KS-CJUvCgt0MdAv4zxQW_7WbXHFkmI2a7JBuOgz-c8rsu8cfKhx2dPXWB7A2dF-PlE3fbOh4Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+<p class="text-white text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">map</span> View on Map
+                    </p>
+</div>
+</section>
+<!-- Description Card -->
+<section class="bg-white dark:bg-surface-dark rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 p-5">
+<h3 class="text-base font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-text text-xl">description</span> Description
+                </h3>
+<p class="text-base leading-relaxed text-secondary-text">
+                    Reviewing Chapter 4 and 5 notes regarding multi-variable differentiation. Need to focus specifically on the chain rule applications.
+                    <br/><br/>
+                    Don't forget to bring the graphing calculator and the borrowed textbook from Sarah.
+                </p>
+</section>
+<!-- Metadata/Tags Section -->
+<section class="flex flex-wrap gap-2">
+<div class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-transparent dark:border-white/5 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-orange-400"></span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Study Session</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/5 border border-transparent dark:border-white/5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-gray-500">group</span>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Group</span>
+</div>
+</section>
+</main>
+<!-- Sticky Action Footer -->
+<!-- Using backdrop blur for a "floating" feel -->
+<div class="absolute bottom-0 left-0 right-0 p-5 pt-2 bg-gradient-to-t from-background-light via-background-light/95 to-transparent dark:from-background-dark dark:via-background-dark/95 dark:to-transparent z-40">
+<div class="flex flex-col gap-3">
+<!-- Primary Action -->
+<button class="w-full h-12 flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white rounded-xl font-semibold text-[15px] shadow-lg shadow-blue-900/20 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+                    Edit Event Details
+                </button>
+<!-- Secondary Destructive Action -->
+<button class="w-full h-12 flex items-center justify-center gap-2 bg-transparent border border-red-200 dark:border-red-900/30 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl font-medium text-[15px] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+                    Delete Event
+                </button>
+</div>
+<!-- iOS Home Indicator Safe Area Placeholder -->
+<div class="h-4 w-full"></div>
+</div>
+</div>
+</body></html>

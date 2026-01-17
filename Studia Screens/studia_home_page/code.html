@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia Home Page</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#1c2333", // Slightly lighter for cards
+                        "surface-dark": "#161c29", // Secondary background
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col relative pb-24 overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between p-6 pb-2 sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture of a student smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAE05QR8pvNwXiF_egicYkdEClNSBdeK8fGA9NIq8zmjCqER-5DBUT9MGc3Xyenogesm3CvmkaIIgxG6KncuE1Nwc4jlYLGtF82m0PLvwC7Gmm9rrcNO8Un1T2Fs08_pZx2TFJFhMbY3qsi8UB5fEZZPWVaYX_GdUVMbARE0r4IL_-sAg2nro1Z35yKoGBwCw0Olbom6flVZCfXQnmOgpuaYgOzymA54P0lFdLc2cVIGYR7kShOJM-UxZWibn5WmivSMZJFC8tSP7X2");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-background-dark"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Good Evening,</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Alex</h2>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-surface-dark/50 hover:bg-surface-dark text-white transition-colors relative">
+<span class="material-symbols-outlined" style="font-size: 24px;">notifications</span>
+<span class="absolute top-2 right-2.5 size-2 bg-red-500 rounded-full animate-pulse"></span>
+</button>
+</header>
+<!-- Main Hero: Timer -->
+<section class="px-6 py-6 flex flex-col items-center">
+<!-- Timer Card with Glow Effect -->
+<div class="relative w-full max-w-sm">
+<!-- Subtle Glow -->
+<div class="absolute -inset-1 bg-primary/30 rounded-2xl blur-xl opacity-75"></div>
+<div class="relative bg-card-dark rounded-2xl p-6 border border-white/5 shadow-xl flex flex-col items-center gap-6">
+<div class="flex items-center justify-between w-full text-xs font-medium text-slate-400 uppercase tracking-widest px-2">
+<span>Focus Mode</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>High Energy</span>
+</div>
+</div>
+<!-- Timer Digits -->
+<div class="flex gap-3 sm:gap-4 w-full justify-center">
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-20 w-16 sm:w-20 items-center justify-center rounded-xl bg-surface-dark border border-white/5 shadow-inner">
+<p class="text-3xl sm:text-4xl font-bold tracking-tight text-white">00</p>
+</div>
+<p class="text-xs text-slate-400 font-medium uppercase">Hrs</p>
+</div>
+<div class="flex flex-col justify-start pt-4">
+<span class="text-2xl text-slate-600 font-bold">:</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-20 w-16 sm:w-20 items-center justify-center rounded-xl bg-surface-dark border border-white/5 shadow-inner relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-3xl sm:text-4xl font-bold tracking-tight text-primary">25</p>
+</div>
+<p class="text-xs text-slate-400 font-medium uppercase">Min</p>
+</div>
+<div class="flex flex-col justify-start pt-4">
+<span class="text-2xl text-slate-600 font-bold">:</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-20 w-16 sm:w-20 items-center justify-center rounded-xl bg-surface-dark border border-white/5 shadow-inner">
+<p class="text-3xl sm:text-4xl font-bold tracking-tight text-white">00</p>
+</div>
+<p class="text-xs text-slate-400 font-medium uppercase">Sec</p>
+</div>
+</div>
+<!-- Main Action Button -->
+<button class="w-full flex items-center justify-center h-14 bg-primary hover:bg-blue-600 text-white text-base font-bold rounded-xl shadow-lg shadow-blue-900/20 transition-all active:scale-95 gap-2 group">
+<span class="material-symbols-outlined group-hover:fill-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Start Session</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Progress Overview -->
+<section class="px-6 py-2 grid grid-cols-2 gap-4">
+<!-- Card 1: Daily Goal -->
+<div class="bg-card-dark p-4 rounded-xl border border-white/5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-slate-400 text-xs font-medium uppercase">
+<span class="material-symbols-outlined text-sm">timelapse</span>
+                    Daily Goal
+                </div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-bold text-white">3.5</span>
+<span class="text-sm text-slate-400">/ 5h</span>
+</div>
+<p class="text-xs text-green-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> On Track
+                    </p>
+</div>
+<!-- Progress Bar -->
+<div class="h-1.5 w-full bg-surface-dark rounded-full overflow-hidden mt-1">
+<div class="h-full bg-gradient-to-r from-green-500 to-emerald-400 w-[70%] rounded-full"></div>
+</div>
+</div>
+<!-- Card 2: Focus Score -->
+<div class="bg-card-dark p-4 rounded-xl border border-white/5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-slate-400 text-xs font-medium uppercase">
+<span class="material-symbols-outlined text-sm">analytics</span>
+                    Efficiency
+                </div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-bold text-white">85</span>
+<span class="text-sm text-slate-400">%</span>
+</div>
+<p class="text-xs text-yellow-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span> 2 Distractions
+                    </p>
+</div>
+<!-- Mini Chart Visual -->
+<div class="flex items-end gap-1 h-2.5 mt-auto w-full">
+<div class="w-full bg-surface-dark rounded-sm h-[40%]"></div>
+<div class="w-full bg-surface-dark rounded-sm h-[60%]"></div>
+<div class="w-full bg-primary/60 rounded-sm h-[80%]"></div>
+<div class="w-full bg-primary rounded-sm h-[100%]"></div>
+<div class="w-full bg-surface-dark rounded-sm h-[50%]"></div>
+</div>
+</div>
+</section>
+<!-- Tasks Section -->
+<section class="px-6 pt-6 flex-1">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold text-white">Today's Plan</h2>
+<button class="text-primary text-sm font-semibold flex items-center gap-1 hover:text-blue-400">
+<span class="material-symbols-outlined text-lg">add</span>
+                    New Task
+                </button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Task Item 1 -->
+<label class="group flex items-start gap-4 p-4 rounded-xl bg-card-dark border border-white/5 hover:border-primary/30 transition-colors cursor-pointer">
+<div class="relative flex items-center mt-0.5">
+<input checked="" class="peer size-5 appearance-none rounded border-2 border-slate-600 bg-transparent checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 pointer-events-none text-sm left-0.5 top-0.5 font-bold">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-400 line-through peer-checked:text-slate-500 transition-colors font-medium">Review History Notes</p>
+<div class="flex items-center gap-2 text-xs text-slate-500">
+<span class="bg-green-500/10 text-green-400 px-1.5 py-0.5 rounded">History</span>
+<span>• 45 mins</span>
+</div>
+</div>
+</label>
+<!-- Task Item 2 -->
+<label class="group flex items-start gap-4 p-4 rounded-xl bg-card-dark border border-white/5 hover:border-primary/30 transition-colors cursor-pointer">
+<div class="relative flex items-center mt-0.5">
+<input class="peer size-5 appearance-none rounded border-2 border-slate-600 bg-transparent checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 pointer-events-none text-sm left-0.5 top-0.5 font-bold">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-white group-hover:text-primary transition-colors font-medium">Complete Math Worksheet</p>
+<div class="flex items-center gap-2 text-xs text-slate-500">
+<span class="bg-blue-500/10 text-blue-400 px-1.5 py-0.5 rounded">Math</span>
+<span class="flex items-center gap-1 text-yellow-500"><span class="material-symbols-outlined text-[10px] fill-current">star</span> High Priority</span>
+</div>
+</div>
+</label>
+<!-- Task Item 3 -->
+<label class="group flex items-start gap-4 p-4 rounded-xl bg-card-dark border border-white/5 hover:border-primary/30 transition-colors cursor-pointer">
+<div class="relative flex items-center mt-0.5">
+<input class="peer size-5 appearance-none rounded border-2 border-slate-600 bg-transparent checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white opacity-0 peer-checked:opacity-100 pointer-events-none text-sm left-0.5 top-0.5 font-bold">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-white group-hover:text-primary transition-colors font-medium">Read Chapter 4</p>
+<div class="flex items-center gap-2 text-xs text-slate-500">
+<span class="bg-purple-500/10 text-purple-400 px-1.5 py-0.5 rounded">Literature</span>
+<span>• 1.5 hrs</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full bg-background-dark/95 backdrop-blur-lg border-t border-white/5 pb-safe pt-2 px-6 z-50 h-[88px]">
+<div class="flex justify-between items-center h-full pb-4">
+<button class="flex flex-col items-center gap-1 text-primary group">
+<div class="p-1.5 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined filled" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="text-[10px] font-semibold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors">
+<div class="p-1.5">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<span class="text-[10px] font-medium">Calendar</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors">
+<div class="p-1.5">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<span class="text-[10px] font-medium">Analytics</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors">
+<div class="p-1.5">
+<span class="material-symbols-outlined">track_changes</span>
+</div>
+<span class="text-[10px] font-medium">Goals</span>
+</button>
+</div>
+</nav>
+<!-- Safe Area Spacing helper -->
+<div class="h-6 w-full"></div>
+</body></html>

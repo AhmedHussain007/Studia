@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studia - Add/Edit Note</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#1e2329",
+                        "input-dark": "#282e39",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode */
+        .dark ::-webkit-scrollbar {
+            width: 6px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #101622;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #282e39;
+            border-radius: 3px;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+        
+        /* Hide scrollbar for cleaner mobile look but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased overflow-hidden selection:bg-primary/30 selection:text-white">
+<div class="relative flex h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-[#111318] overflow-hidden shadow-2xl">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-3 bg-background-light dark:bg-[#111318] z-20">
+<!-- Back Button -->
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<!-- Title -->
+<h1 class="text-lg font-bold tracking-tight text-center flex-1 dark:text-white">New Note</h1>
+<!-- Actions Menu (Delete/More) -->
+<div class="flex items-center justify-end w-10">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all focus:outline-none focus:ring-2 focus:ring-red-500/50">
+<span class="material-symbols-outlined text-[24px]">delete</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24 px-4 pt-2">
+<!-- Note Card Container -->
+<div class="flex flex-col rounded-2xl bg-white dark:bg-card-dark shadow-sm dark:shadow-none border border-slate-200 dark:border-slate-800 p-5 gap-4 min-h-[calc(100vh-180px)]">
+<!-- Meta Data -->
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Last Edited</span>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">October 24, 2023 at 10:30 AM</span>
+</div>
+<!-- Title Input -->
+<div class="group relative">
+<input class="w-full bg-transparent p-0 text-2xl font-bold text-slate-900 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600 border-none focus:ring-0 focus:border-none focus:outline-none transition-colors" placeholder="Enter note title" type="text" value=""/>
+<!-- Subtle underline effect on focus is handled by the container styling generally, 
+                         but here we keep it clean as per 'distraction-free' request. -->
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-slate-100 dark:bg-slate-700/50"></div>
+<!-- Body Input -->
+<div class="flex-1 relative">
+<textarea class="w-full h-full min-h-[300px] resize-none bg-transparent p-0 text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 placeholder:text-slate-300 dark:placeholder:text-slate-600 border-none focus:ring-0 focus:border-none focus:outline-none" placeholder="Start writing your note..."></textarea>
+</div>
+<!-- Optional: Image Attachment Preview (Example of content mixing) -->
+<!-- 
+                <div class="mt-4 rounded-xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Abstract blurred background suggesting focus" 
+                         class="w-full h-48 object-cover opacity-80"
+                         data-alt="Abstract blurred background suggesting focus">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 cursor-pointer">
+                        <span class="material-symbols-outlined text-white">edit</span>
+                    </div>
+                </div> 
+                -->
+</div>
+<!-- Spacer to ensure content isn't hidden behind fixed footer -->
+<div class="h-6"></div>
+</main>
+<!-- Fixed Footer Actions -->
+<!-- Using backdrop-blur for that native iOS feel -->
+<footer class="absolute bottom-0 left-0 right-0 p-4 bg-background-light/90 dark:bg-[#111318]/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 z-30">
+<div class="flex flex-col gap-3">
+<!-- Formatting Toolbar (Optional, keeps it minimal but functional) -->
+<div class="flex items-center justify-between px-2 mb-2">
+<button class="text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">format_bold</span>
+</button>
+<button class="text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">format_italic</span>
+</button>
+<button class="text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</button>
+<button class="text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">check_box</span>
+</button>
+<button class="text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">image</span>
+</button>
+</div>
+<!-- Main Save Button -->
+<button class="flex w-full items-center justify-center rounded-xl bg-primary h-12 px-6 text-base font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all">
+                    Save Note
+                </button>
+</div>
+</footer>
+</div>
+</body></html>
